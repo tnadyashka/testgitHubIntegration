@@ -2,6 +2,6 @@
 
 My class1{
 
-System.out.println("this is a first line);
+S//ystem.out.println("this is a first line);
 
 }
