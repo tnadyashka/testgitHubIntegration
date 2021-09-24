@@ -7,11 +7,13 @@ jobs:
     runs-on: ubuntu-latest
     name: Create a comment in Asana Task
     steps:
-      - name: Create a comment
-        uses: Asana/comment-on-task-github-action@v1.0
-        id: createComment
+      - name: Checkout
+        uses: actions/checkout@v2
+      - name: Post a comment about the PR status
+        uses: ./
+        id: postComment
         with:
           asana-secret: ${{ secrets.ASANA_SECRET }}
-          comment-text: "{{PR_NAME}} was {{PR_STATE}}, link - {{PR_URL}}"
+          comment-text: "{{PR_NAME}} is in {{PR_STATE}}"
       - name: Get status
-        run: echo "Status is ${{ steps.createComment.outputs.status }}"
+        run: echo "PR status is ${{ steps.createComment.outputs.status }}"
