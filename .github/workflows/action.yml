@@ -12,6 +12,6 @@ jobs:
         id: createComment
         with:
           asana-secret: ${{ secrets.ASANA_SECRET }}
-          comment-text: ""
+          comment-text: " {{PR_URL}}, with {{PR_ID}}, and {{PR_NAME}}, was {{PR_STATE}}"
       - name: Get status
-        run: echo "PR Status is ${{ steps.createComment.outputs.status }}"
+        run: echo "Status is ${{ steps.createComment.outputs.status }}"
