@@ -9,8 +9,7 @@ Private String str;
 
 
     steps:
-      - name: Create a comment
-        uses: Asana/comment-on-task-github-action@v1.0
+      
         id: createComment
         with:
           asana-secret: ${{ secrets.ASANA_SECRET }}
