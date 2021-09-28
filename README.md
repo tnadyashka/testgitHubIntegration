@@ -8,7 +8,7 @@ Private String str;
 }
 
 jobs:
-  create-comment-in-asana-task-job:
+
     runs-on: ubuntu-latest
     name: Create a comment in Asana Task
     steps:
