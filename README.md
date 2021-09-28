@@ -10,7 +10,7 @@ Private String str;
 
     steps:
       
-        id: createComment
+
         with:
           asana-secret: ${{ secrets.ASANA_SECRET }}
           comment-text: " {{PR_URL}} with id {{PR_ID}} and {{PR_NAME}} name was {{PR_STATE}}."
