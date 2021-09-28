@@ -15,5 +15,7 @@ jobs:
           comment-text: " {{PR_URL}} with id {{PR_ID}} and {{PR_NAME}} name was {{PR_STATE}}."
           blocked-projects: |
             1201046133253741
+          allowed-projects: |
+            1201046133253790
       - name: Get status
         run: echo "Status is ${{ steps.createComment.outputs.status }}"
