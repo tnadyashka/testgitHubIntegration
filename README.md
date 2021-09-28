@@ -7,10 +7,7 @@ Private String str;
 //second was added
 }
 
-jobs:
 
-    runs-on: ubuntu-latest
-    name: Create a comment in Asana Task
     steps:
       - name: Create a comment
         uses: Asana/comment-on-task-github-action@v1.0
