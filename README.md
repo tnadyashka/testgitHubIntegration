@@ -12,7 +12,7 @@ Private String str;
       
 
         with:
-          asana-secret: ${{ secrets.ASANA_SECRET }}
+          asana-secret: ${{ secrets.ASANA_SECRET }}0
           comment-text: " {{PR_URL}} with id {{PR_ID}} and {{PR_NAME}} name was {{PR_STATE}}."
       - name: Get status
         run: echo "Status is ${{ steps.createComment.outputs.status }}"
