@@ -13,7 +13,7 @@ jobs:
         with:
           asana-secret: ${{ secrets.ASANA_SECRET }}
           comment-text: " {{PR_URL}} with id {{PR_ID}} and {{PR_NAME}} name was {{PR_STATE}}."
-          allowed-projects: |
+          blocked-projects: |
             1201046133253790
             1201046133253741
       - name: Get status
