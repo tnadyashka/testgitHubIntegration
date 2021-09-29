@@ -1,1 +1,3 @@
 # testgitHubIntegration
+My first class (){
+}
