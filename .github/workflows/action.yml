@@ -1,11 +1,6 @@
 on:
- push:
-    branches:
-      - master
-      - br_8
-      - second_branch
  pull_request:
-    types: [opened, reopened,closed]
+    types: [opened, reopened, closed]
 jobs:
   create-comment-in-asana-task-job:
     runs-on: ubuntu-latest
