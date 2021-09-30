@@ -1,6 +1,6 @@
 on:
   pull_request:
-    types: [opened, reopened]
+    types: [closed]
 
 jobs:
   create-comment-in-asana-task-job:
@@ -12,9 +12,6 @@ jobs:
         id: createComment
         with:
           asana-secret: ${{ secrets.ASANA_SECRET }}
-          comment-text: " {{PR_URL}} with id {{PR_ID}} and {{PR_NAME}} name was {{PR_STATE}}."
-          allowed-projects: |
-            1201046133253741
-            1201046133253790
+          comment-text: "'{{PR_NAME}}' was {{PR_STATE}} ({{PR_URL}})"
       - name: Get status
         run: echo "Status is ${{ steps.createComment.outputs.status }}"
