@@ -1,0 +1,16 @@
+on:
+  pull_request:
+    types: [closed]
+
+jobs:
+  create-asana-attachment-job:
+    runs-on: ubuntu-latest
+    name: Post an attachment
+    steps:
+      - name: Post an attachment
+        uses: Asana/create-app-attachment-github-action@v1.0
+        id: postAttachment
+        with:
+          asana-secret: ${{ secrets.ASANA_SECRET }}
+      - name: Get status
+        run: echo "Status is ${{ steps.postAttachment.outputs.status }}"
